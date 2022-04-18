@@ -51,3 +51,10 @@ In this paper, a data-driven approach is taken to predict Arctic sea ice extent 
 
 ## Best Model Architecture
 <img src="./static/best-model.png" width="600"/>
+
+## References
+> Ali, S., Huang, Y., Huang, X., and Wang, J. Sea Ice
+Forecasting using Attention-based Ensemble LSTM.
+arXiv:2108.00853 [physics], February 2022. URL
+http://arxiv.org/abs/2108.00853. arXiv:
+2108.00853.
