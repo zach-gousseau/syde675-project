@@ -50,4 +50,4 @@ In this paper, a data-driven approach is taken to predict Arctic sea ice extent 
 <img src="./static/gen-model-arch.png" width="300"/>
 
 ## Best Model Architecture
-<img src="./static/best-model.png" width="500"/>
+<img src="./static/best-model.png" width="600"/>
