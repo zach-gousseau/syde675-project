@@ -15,7 +15,6 @@ In this paper, a data-driven approach is taken to predict Arctic sea ice extent 
 │   ├── extents.nc
 │   ├── monthly_features.npy
 │   ├── monthly_target.npy
-│   └── X_grid.npy
 ├── Models
 │   ├── Improvements
 │   │   ├── evaluation.ipynb
@@ -34,7 +33,6 @@ In this paper, a data-driven approach is taken to predict Arctic sea ice extent 
 │       └── m-LSTM_Replication.ipynb
 └── Results
     ├── Improvements
-    │   ├── folders containing results of different models
     │   ├── all_results.csv
     │   └── sensitivity_analysis.csv
     ├── ML_Models
