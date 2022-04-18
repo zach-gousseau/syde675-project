@@ -1,5 +1,6 @@
 .DS_Store
 *.zarr
+Results/Improvements/*/
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
