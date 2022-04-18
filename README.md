@@ -47,6 +47,8 @@ In this paper, a data-driven approach is taken to predict Arctic sea ice extent 
 ```
 
 ## General Model Architecture
+Our proposed model architecture consists of stacked ConvLSTM, convolutional/pooling layers, and LSTM layers.
+
 <img src="./static/gen-model-arch.png" width="300"/>
 
 ## Best Model Architecture
