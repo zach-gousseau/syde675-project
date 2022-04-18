@@ -2,44 +2,42 @@
 <!-- Term project for SYDE 675: Sea ice extent forecasting using LSTMs, attention, and multiple timeframes -->
 
 ## Abstract
-In this paper, a data-driven approach is taken to predict Arctic sea ice extent (SIE). We first assess the work of (Ali et al., 2022) in their paper ”Sea Ice Forecasting using Attention-based Ensemble LSTM”. We find that their results are not perfectly reproducible, and that their model does not outperform a naive statistical baseline. We then propose an alternative model architecture which accepts both spatial and temporal inputs, and uses several new climatic input variables. We test a variety of hyperparameters and find our best model outperforming a baseline statistical model by 56% in %RMSE.
+Arctic sea ice is important for the Earth’s climate and ecosystem. The rapidly changing climate is making it more difficult to predict annual fluctuations in Arctic sea ice extent. In this paper, a data-driven approach is taken to predict monthly Arctic sea ice extent using deep learning. We first assess the work of (Ali et al., 2022) in their paper "Sea Ice Forecasting using Attention-based Ensemble LSTM" and find a lack of reproducibility in their methodology, and note that naive statistical baselines outperform their proposed model. We then propose an alternative model architecture which accepts both spatial and temporal inputs, and uses several new climatic input variables. We test a variety of hyperparameters and find our best model achieving a %RMSE of 4.88% and MAPE of 3.29%, outperforming a climatology with linear trend baseline by 56% in %RMSE.
 
 ## Folder Structure
 ```
 .
 ├── Data
-│   ├── Arctic_domain_mean_1979_2018.csv
-│   ├── Arctic_domain_mean_monthly_1979_2018.csv
-│   ├── dailyt30_features.npy
-│   ├── dailyt30_target.npy
-│   ├── extents.nc
-│   ├── monthly_features.npy
-│   ├── monthly_target.npy
-│   └── X_grid.npy
+│   ├── Arctic_domain_mean_1979_2018.csv             ┐
+│   ├── Arctic_domain_mean_monthly_1979_2018.csv     │
+│   ├── dailyt30_features.npy                        │- Original data from Ali et al.  
+│   ├── dailyt30_target.npy                          │ 
+│   ├── monthly_features.npy                         │
+│   ├── monthly_target.npy                           ┘ 
+│   └── extents.nc  <-- SIE calculated from ERA5 SIC estimates
 ├── Models
 │   ├── Improvements
-│   │   ├── evaluation.ipynb
-│   │   ├── model.py
-│   │   ├── pre-process.ipynb
-│   │   ├── run_tests.ipynb
-│   │   └── xgrid_utils.py
+│   │   ├── model.py  <-- Contains the main model class 
+│   │   ├── pre-process.ipynb  <-- Pre-processing the spatial data & calculating SIE
+│   │   ├── run_tests.ipynb  <-- Train models given a set of hyperparameters
+│   │   ├── evaluation.ipynb  <-- Model evaluation and visualization
+│   │   └── xgrid_utils.py  <-- Used to calcualte SIE
 │   ├── ML_Models
 │   │   └── ML_models.ipynb
 │   └── Replication
-│       ├── d-LSTM_Replication.ipynb
-│       ├── EA-LSTM_Enhanced.ipynb
-│       ├── EA-LSTM_Enhanced_Separated.ipynb
-│       ├── EA-LSTM_Replication.ipynb
-│       ├── E-LSTM_Replication.ipynb
-│       └── m-LSTM_Replication.ipynb
+│       ├── d-LSTM_Replication.ipynb  <-- Replicating the daily-to-monthly model results 
+│       ├── m-LSTM_Replication.ipynb  <-- Replicating the monthly-to-monthly model results
+│       ├── E-LSTM_Replication.ipynb  <-- Replicating the ensemble model results
+│       ├── EA-LSTM_Replication.ipynb  <-- Replicating the attention-based ensemble model results
+│       ├── EA-LSTM_Enhanced.ipynb  <-- Enhancing the original architecture 
+│       └── EA-LSTM_Enhanced_Separated.ipynb  <-- Training each model separately 
 └── Results
     ├── Improvements
-    │   ├── folders containing results of different models
-    │   ├── all_results.csv
-    │   └── sensitivity_analysis.csv
-    ├── ML_Models
-    │   ├── csv files containing scores of ML models
-    └── Replication
+    │   ├── all_results.csv  <-- Results of all experiments
+    │   └── sensitivity_analysis.csv  <-- Results of the sensitivity analysis 
+    ├── ML_Models  <-- CSV files containing scores for each ML model
+    │   └── ...
+    └── Replication  <-- Results of running the original models 20 times
         ├── d-lstm_scores.csv
         ├── ea_lstm_scores.csv
         ├── e_lstm_scores.csv
