@@ -21,9 +21,6 @@ In this paper, a data-driven approach is taken to predict Arctic sea ice extent 
 │   │   ├── evaluation.ipynb
 │   │   ├── model.py
 │   │   ├── pre-process.ipynb
-│   │   ├── __pycache__
-│   │   │   ├── model.cpython-39.pyc
-│   │   │   └── xgrid_utils.cpython-39.pyc
 │   │   ├── run_tests.ipynb
 │   │   └── xgrid_utils.py
 │   ├── ML_Models
