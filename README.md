@@ -48,3 +48,9 @@ In this paper, a data-driven approach is taken to predict Arctic sea ice extent 
         ├── e_lstm_scores.csv
         └── m-lstm_scores.csv
 ```
+
+## General Model Architecture
+<img src="./static/gen-model-arch.png" width="300"/>
+
+## Best Model Architecture
+<img src="./static/best-model.png" width="500"/>
