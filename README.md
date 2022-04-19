@@ -7,7 +7,7 @@ Arctic sea ice is important for the Earth’s climate and ecosystem. The rapidly
 ## Project Navigation
 This project consists of 1) replicating Ali et al.'s original results, 2) enhancing their architecture using their data, 3) evaluate traditional ML methods on the original dataset, and 4) proposing and evaluating a novel model architecture using new data. Work done to fulfill (1) and (2) can be found in folders named 'Replication', (3) can be found in 'ML_Models', and (4) can be found in 'Improvements'.
 
-The final scores of our proposed models are in Results/Improvements/all_results.csv, and visualizations can be found under Models/Improvements/evaluation.ipynb.
+The final scores of our proposed models are in Results/Improvements/all_results.csv, and visualizations can be found under Models/Improvements/evaluation.ipynb. Note that the 'Improvements' notebooks cannot be run without the original spatial data, which is too large to upload to Github.
 
 ## Folder Structure
 ```
